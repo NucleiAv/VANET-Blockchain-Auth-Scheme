@@ -1,4 +1,4 @@
-
+# Motivation and Improvements
 The development of Vehicular Ad-hoc Networks (VANETs) is essential for the future of intelligent transportation systems, aiming to improve road safety, traffic management, and operational efficiency. The thesis "Secure Blockchains for Cyber-Physical Systems" introduced a blockchain-based approach to securing VANETs by utilizing the concept of platoons and the removal of RSUs (Road Side Units) - a mechanism that is one of a kind and had never been proposed before. However, it left several critical areas unaddressed. These voids motivated us to build on this unique concept, addressing its shortcomings to make it more robust. This paper proposes enhancements to the original model, focusing on improving communication, coordination, and management within VANETs.
 
 ### Intra-Platoon Communication Gaps
@@ -19,6 +19,6 @@ The development of Vehicular Ad-hoc Networks (VANETs) is essential for the futur
 
 2. Advanced Traffic Management: The original traffic management strategies were oversimplified. Our approach incorporates advanced lane management, dynamic obstacle detection, and adaptive speed regulation to handle diverse and complex traffic conditions more effectively.
 
-### Conclusion
+# Conclusion
 The gaps identified in the original thesis motivated us to develop an enhanced model for VANET communication and management. Our proposed improvements aim to fill these voids, ensuring a more secure, efficient, and scalable VANET system. By incorporating comprehensive inter-platoon communication, dynamic trust management, and advanced traffic handling protocols, our model represents a significant advancement in the field of vehicular networks, paving the way for more reliable and safer smart transportation systems.
 
