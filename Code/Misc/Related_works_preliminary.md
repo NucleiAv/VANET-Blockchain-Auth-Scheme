@@ -1,0 +1,10 @@
+**Related Works**
+
+Vehicular Ad-Hoc Networks (VANETs) have been widely studied to improve road safety, traffic management, and driving efficiency. Traditional VANET models rely on both vehicle-to-vehicle (V2V) and vehicle-to-infrastructure (V2I) communications, often using Roadside Units (RSUs) to facilitate data exchange and maintain network infrastructure【6†source】【7†source】. However, these approaches can incur significant costs due to the deployment and maintenance of RSUs, which also pose potential vulnerabilities as centralized points of failure.
+
+To address these limitations, platooning has emerged as a promising alternative. Platooning allows vehicles to travel in close proximity, reducing drag and improving fuel efficiency by taking advantage of slipstream effects. This model significantly lowers operational costs by eliminating the need for RSUs, instead relying solely on inter-vehicle communication. A key benefit of this approach is the potential for reduced fuel consumption and enhanced aerodynamic efficiency, which is particularly valuable for long-haul transportation and high-density traffic scenarios【6†source】.
+
+One notable study implemented a blockchain-based platooning scenario focusing on intra-platoon communication, ensuring secure and efficient data sharing among vehicles within the same group. However, this study did not extend its scope to inter-platoon communication, which is critical for maintaining coordination among multiple platoons and responding to dynamic traffic conditions. This oversight highlights an area for further research, particularly in optimizing communication protocols and ensuring seamless interactions between different platoon groups.
+
+Platooning models, while beneficial in reducing dependency on infrastructure, present unique challenges in terms of managing interactions between platoons and maintaining overall network stability. Future research should explore strategies for efficient inter-platoon communication, potentially leveraging decentralized technologies to enhance scalability and resilience without relying on fixed infrastructure.
+
