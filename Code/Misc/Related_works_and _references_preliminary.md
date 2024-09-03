@@ -1,4 +1,4 @@
-Related Works
+# Related Works
 
 Vehicular Ad-Hoc Networks (VANETs) have been extensively researched to enhance road safety, traffic efficiency, and overall driving conditions. Traditional VANET models utilize both vehicle-to-vehicle (V2V) and vehicle-to-infrastructure (V2I) communications, with Roadside Units (RSUs) playing a crucial role in maintaining network infrastructure and facilitating data exchange between vehicles and centralized systems (Lu et al., 2018; Wagner, 2020). However, these models can be costly due to the deployment and maintenance of RSUs, which also present potential vulnerabilities as centralized points of failure.
 
@@ -12,7 +12,7 @@ The current literature underscores the need for a decentralized approach that mi
 
 In conclusion, while the platooning model offers significant advantages in terms of cost and efficiency, particularly in fuel savings and reduced infrastructure requirements, the lack of inter-platoon communication capabilities remains a critical gap. Addressing this gap is essential for the development of a fully autonomous and integrated VANET system that can handle diverse traffic scenarios and enhance road safety for all users.
 
-References:
+# References:
 
 Lu, Z., Qu, G., & Liu, Z. (2018). A Blockchain-Based Privacy-Preserving Authentication Scheme for VANETs. IEEE Transactions on Very Large Scale Integration (VLSI) Systems.
 Wagner, M. E. (2020). Secure blockchains for cyber-physical systems (Doctoral dissertation). Missouri University of Science and Technology. Retrieved from https://scholarsmine.mst.edu/doctoral_dissertations/2924.
