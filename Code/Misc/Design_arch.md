@@ -1,7 +1,7 @@
 # Design Architecture
 
 #### 1. **Overview**
-   The proposed design architecture focuses on enhancing VANETs (Vehicular Ad-hoc Networks) by addressing the limitations identified in the "Secure Blockchains for Cyber-Physical Systems" thesis. The enhancements include the removal of RSUs (Roadside Units), introducing a platoon-based communication system, and ensuring real-time, secure communication and coordination among vehicles.
+   The proposed design architecture focuses on enhancing VANETs (Vehicular Ad-hoc Networks) by addressing the limitations of the "Secure Blockchains for Cyber-Physical Systems" thesis. The enhancements include the removal of RSUs (Roadside Units), introducing a platoon-based communication system, and ensuring real-time, secure communication and coordination among vehicles.
 
 #### 2. **System Components**
    - **Platoons**: Groups of vehicles traveling together, with a designated leader responsible for communication and command execution.
@@ -24,8 +24,8 @@
      - In critical situations, such as emergencies or obstacles, leaders exchange "Command Exchange Requests" to synchronize actions across platoons.
 
    - **Trust Management and Pseudonym Handling**:
-     - The Trust Authority (TA) maintains a record of vehicle pseudonyms, enabling traceability while preserving privacy.
-     - Vehicles can change pseudonyms over time, but the TA ensures a one-to-one mapping from original to current pseudonyms, preventing issues during audits.
+     - The Trust Authority (TA) maintains a record of vehicle pseudonyms, enabling traceability while preserving conditional privacy.
+     - Vehicles can change pseudonyms over time, but the TA keeps track of current and past pseudonyms to ensure that reports can be validated regardless of the order they're received in.
      - Trust scores are dynamically adjusted based on vehicle behavior, with penalties for malicious actions or false signals.
 
    - **Event Logging and Blockchain Integration**:
@@ -46,5 +46,5 @@
    - Security is reinforced through the use of blockchain technology, ensuring that all actions are traceable and verifiable, reducing the risk of attacks or malicious behavior.
 
 #### 6. **Emergency Handling and Override Mechanisms**
-   - In extreme emergencies, any platoon leader can invoke a "Critical Situation Override" to bypass the consensus process and issue immediate commands to all nearby platoons.
-   - Post-emergency, a review is conducted to assess the justification of the override, with trust scores adjusted accordingly.
+   - ~In extreme emergencies, any platoon leader can invoke a "Critical Situation Override" to bypass the consensus process and issue immediate commands to all nearby platoons.~
+   - ~Post-emergency, a review is conducted to assess the justification of the override, with trust scores adjusted accordingly.~
