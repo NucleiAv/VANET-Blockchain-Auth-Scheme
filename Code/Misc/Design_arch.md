@@ -20,7 +20,6 @@
 
    - **Inter-Platoon Communication**:
      - Platoons communicate with each other using an Inter-Platoon Communication Protocol (IPCP), managed by platoon leaders.
-     - Leaders periodically broadcast "Leader Beacons" to detect nearby platoons, facilitating dynamic grouping and coordination.
      - In critical situations, such as emergencies or obstacles, leaders exchange "Command Exchange Requests" to synchronize actions across platoons.
 
    - **Trust Management and Pseudonym Handling**:
@@ -44,7 +43,3 @@
    - The removal of RSUs significantly reduces the cost and complexity of deploying and maintaining the VANET system.
    - The system is scalable, capable of handling large numbers of vehicles without overloading communication channels or processing resources.
    - Security is reinforced through the use of blockchain technology, ensuring that all actions are traceable and verifiable, reducing the risk of attacks or malicious behavior.
-
-#### 6. **Emergency Handling and Override Mechanisms**
-   - ~In extreme emergencies, any platoon leader can invoke a "Critical Situation Override" to bypass the consensus process and issue immediate commands to all nearby platoons.~
-   - ~Post-emergency, a review is conducted to assess the justification of the override, with trust scores adjusted accordingly.~
