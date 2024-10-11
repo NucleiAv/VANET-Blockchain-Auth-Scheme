@@ -1,6 +1,8 @@
 # VANET-Blockchain-Auth-Scheme
 
-**Techstack**: Python, C++, Solidity, Plexe, R, Shell, etc
+**Techstack**: Python, C++, Solidity, Plexe, R, Shell, etc.
+
+**Note** - This code/repository is a part of the on-going research on "_A Blockchain-based Privacy-Preserving Authentication Scheme for Secure Vehicular Communications_", which we - Anmol Vats, Suryansh Arya and Sharvil Bhatt - are integral members and under-graduate researchers of.
 
 ## VANET Security
 
