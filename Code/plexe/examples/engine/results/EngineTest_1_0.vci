@@ -1,0 +1,156 @@
+file 154144 1723817368                                          
+version 3
+run EngineTest-1-20240816-19:39:06-10375
+attr configname EngineTest
+attr datetime 20240816-19:39:06
+attr datetimef 20240816-193906
+attr experiment EngineTest
+attr inifile omnetpp.ini
+attr iterationvars "$vehicle=1, $model=\"audi-r8\", $useLaunchd=false, $nCars=8, $platoonSize=8, $nLanes=1, $ploegH=0.5, $beaconInterval=0.1, $priority=4, $packetSize=200"
+attr iterationvarsd vehicle=1/model=audi-r8/useLaunchd=false/nCars=8/platoonSize=8/nLanes=1/ploegH=0.5/beaconInterval=0.1/priority=4/packetSize=200
+attr iterationvarsf vehicle=1,model=audi-r8,useLaunchd=false,nCars=8,platoonSize=8,nLanes=1,ploegH=0.5,beaconInterval=0.1,priority=4,packetSize=200-
+attr measurement "$vehicle=1, $model=\"audi-r8\", $useLaunchd=false, $nCars=8, $platoonSize=8, $nLanes=1, $ploegH=0.5, $beaconInterval=0.1, $priority=4, $packetSize=200"
+attr network Engine
+attr processid 10375
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 1
+attr seedset 0
+itervar beaconInterval 0.1
+itervar model "\"audi-r8\""
+itervar nCars 8
+itervar nLanes 1
+itervar packetSize 200
+itervar platoonSize 8
+itervar ploegH 0.5
+itervar priority 4
+itervar useLaunchd false
+itervar vehicle 1
+config image-path ../../../veins/images
+config repeat 1
+config *.manager.command "\"sumo-gui\""
+config *.manager.ignoreGuiCommands false
+config *.node[*].scenario_type "\"AccelerateAndBrakeScenario\""
+config sim-time-limit "100 s"
+config *.node[*].scenario.acceleration "20 mpsps"
+config *.node[*].scenario.brakingDeceleration "20 mpsps"
+config *.node[*].scenario.startAccelerating "5 s"
+config *.node[*].scenario.startBraking "75 s"
+config **.dummyvehicle 1
+config *.node[*].scenario.vehicleType "\"audi-r8\""
+config output-vector-file results/EngineTest_1_0.vec
+config output-scalar-file results/EngineTest_1_0.sca
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 10s
+config num-rngs 6
+config network Engine
+config debug-on-errors true
+config print-undisposed true
+config *.playgroundSizeX 65000m
+config *.playgroundSizeY 25000m
+config *.playgroundSizeZ 50m
+config sim-time-limit "120 s"
+config *.annotations.draw false
+config *.obstacles.debug false
+config *.world.useTorus false
+config *.world.use2D false
+config *.manager.updateInterval 0.01s
+config *.manager.host "\"localhost\""
+config *.manager.moduleType "\"org.car2x.plexe.PlatoonCar\""
+config *.manager.moduleName "\"node\""
+config *.manager.moduleDisplayString "\"\""
+config *.manager.autoShutdown true
+config *.manager.margin 25
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 100mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.mac1609_4.useAcks true
+config *.**.nic.mac1609_4.ackErrorRate 0.0
+config *.**.nic.mac1609_4.frameErrorRate 0.0
+config *.**.nic.phy80211p.minPowerLevel -94dBm
+config *.**.nic.phy80211p.maxTXPower 100mW
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -95dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.node[*].mobility.x 0
+config *.node[*].mobility.y 0
+config *.node[*].mobility.z 1.895
+config seed-set 0
+config **.seed 0
+config *.node[*].prot.rng-0 2
+config *.node[*].appl.rng-0 3
+config *.node[*].scenario.rng-0 4
+config **.traffic.rng-0 5
+config *.manager.configFile "\"./sumocfg/freeway.sumo.cfg\""
+config *.manager.launchConfig "xmldoc(\"./sumocfg/freeway.launchd.xml\")"
+config *.useLaunchd false
+config *.node[*].scenario.vehicleFile "false ? \"./vehicles.xml\" : \"./sumocfg/vehicles.xml\""
+config **.numberOfCars 8
+config **.numberOfCarsPerPlatoon 8
+config **.numberOfLanes 1
+config *.node[*].helper_type "\"PositionHelper\""
+config *.node[*].helper.nLanes 1
+config *.node[*].helper.platoonSize 8
+config *.node[*].helper.nCars 8
+config *.node[*].scenario.engineTau "0.5 s"
+config *.node[*].scenario.ploegH 0.5s
+config *.node[*].scenario.ploegKp 0.2
+config *.node[*].scenario.ploegKd 0.7
+config *.node[*].scenario.useRealisticEngine true
+config *.node[*].scenario.accHeadway "1 s"
+config *.node[*].scenario.leaderHeadway "1 s"
+config *.node[*].scenario.leaderSpeed "0 kmph"
+config *.node[*].appl_type "\"SimplePlatooningApp\""
+config *.node[*].appl.*.scalar-recording true
+config *.node[*].appl.*.vector-recording true
+config *.node[*].protocol_type "\"SimplePlatooningBeaconing\""
+config *.node[*].prot.*.scalar-recording true
+config *.node[*].prot.*.vector-recording true
+config *.node[*].prot.beaconingInterval 0.1s
+config *.node[*].prot.priority 4
+config *.node[*].prot.packetSize 200
+config *.node[*].prot.useControllerAcceleration true
+config **.traffic_type "\"PlatoonsTrafficManager\""
+config **.traffic.platoonInsertTime "1 s"
+config **.traffic.platoonInsertSpeed "0 kmph"
+config **.traffic.nCars 1
+config **.traffic.platoonSize 1
+config **.traffic.nLanes 1
+config **.traffic.platooningVType "\"vtypeauto\""
+config **.traffic.platoonInsertDistance "1 m"
+config **.traffic.platoonInsertHeadway "1 s"
+config **.traffic.platoonLeaderHeadway "1 s"
+config **.traffic.controller "\"ACC\""
+config **.scalar-recording false
+config **.vector-recording false
+
+vector 0 Engine.node[0].appl distance ETV
+vector 1 Engine.node[0].appl relativeSpeed ETV
+vector 2 Engine.node[0].appl nodeId ETV
+vector 3 Engine.node[0].appl acceleration ETV
+vector 4 Engine.node[0].appl controllerAcceleration ETV
+vector 5 Engine.node[0].appl speed ETV
+vector 6 Engine.node[0].appl posx ETV
+vector 7 Engine.node[0].appl posy ETV
+vector 8 Engine.node[0].prot nodeId ETV
+vector 9 Engine.node[0].prot busyTime ETV
+vector 10 Engine.node[0].prot collisions ETV
+0	5813 16213 113 20961 1.11 99.91 989 -1 -1 -989 989
+1	22026 15224 113 20961 1.11 99.91 989 0 0 0 0
+2	37250 15224 113 20961 1.11 99.91 989 0 0 0 0
+3	52474 20424 113 20961 1.11 99.91 989 -11.3777 9.05966 3.8469711999998 11528.113907796
+4	72898 16084 113 20961 1.11 99.91 989 -20 20 12400 312000
+5	88982 19828 113 20961 1.11 99.91 989 0 82.5296 50132.62347233 3562695.578982
+6	108810 20780 113 20961 1.11 99.91 989 8.44 5021.7 2663637.67817 10527499001.688
+7	129590 20169 113 20961 1.11 99.91 989 242.45 242.45 239783.05 58135400.472499
+8	149759 1230 301 20981 2 100 99 0 0 0 0
+9	150989 1825 301 20981 2 100 99 0.002817 0.00313 0.309557 0.000968031689
+10	152814 1329 301 20981 2 100 99 0 0 0 0
+

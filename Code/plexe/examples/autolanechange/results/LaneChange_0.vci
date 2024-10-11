@@ -1,0 +1,414 @@
+                                                                
+version 3
+run LaneChange-0-20240816-19:33:13-9994
+attr configname LaneChange
+attr datetime 20240816-19:33:13
+attr datetimef 20240816-193313
+attr experiment LaneChange
+attr inifile omnetpp.ini
+attr iterationvars "$nCars=8, $platoonSize=8, $nLanes=1, $vtype=\"vtypeauto\", $ploegH=0.5, $controller=0, $leaderHeadway=1.2, $beaconInterval=-1, $priority=4, $packetSize=200, $0=5, $1=0, $2=\"CACC\""
+attr iterationvarsd nCars=8/platoonSize=8/nLanes=1/vtype=vtypeauto/ploegH=0.5/controller=0/leaderHeadway=1.2/beaconInterval=-1/priority=4/packetSize=200/5/0/CACC
+attr iterationvarsf nCars=8,platoonSize=8,nLanes=1,vtype=vtypeauto,ploegH=0.5,controller=0,leaderHeadway=1.2,beaconInterval=-1,priority=4,packetSize=200,5,0,CACC-
+attr measurement "$nCars=8, $platoonSize=8, $nLanes=1, $vtype=\"vtypeauto\", $ploegH=0.5, $controller=0, $leaderHeadway=1.2, $beaconInterval=-1, $priority=4, $packetSize=200, $0=5, $1=0, $2=\"CACC\""
+attr network AutoLaneChange
+attr processid 9994
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+itervar beaconInterval -1
+itervar controller 0
+itervar leaderHeadway 1.2
+itervar nCars 8
+itervar nLanes 1
+itervar packetSize 200
+itervar platoonSize 8
+itervar ploegH 0.5
+itervar priority 4
+itervar vtype "\"vtypeauto\""
+config image-path ../../../veins/images
+config repeat 1
+config *.manager.command "\"sumo-gui\""
+config *.manager.ignoreGuiCommands false
+config *.node[*].scenario_type "\"AutoLaneChangeScenario\""
+config sim-time-limit "400 s"
+config output-vector-file results/LaneChange_0.vec
+config output-scalar-file results/LaneChange_0.sca
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 10s
+config num-rngs 7
+config network AutoLaneChange
+config debug-on-errors true
+config print-undisposed true
+config *.playgroundSizeX 65000m
+config *.playgroundSizeY 25000m
+config *.playgroundSizeZ 50m
+config sim-time-limit "120 s"
+config *.annotations.draw false
+config *.obstacles.debug false
+config *.world.useTorus false
+config *.world.use2D false
+config *.manager.updateInterval 0.01s
+config *.manager.host "\"localhost\""
+config *.manager.moduleType "\"vtypeauto=org.car2x.plexe.PlatoonCar vtypehuman=0\""
+config *.manager.moduleName "\"vtypeauto=node vtypehuman=0\""
+config *.manager.moduleDisplayString "\"\""
+config *.manager.autoShutdown true
+config *.manager.margin 25
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 100mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.mac1609_4.useAcks true
+config *.**.nic.mac1609_4.ackErrorRate 0.0
+config *.**.nic.mac1609_4.frameErrorRate 0.0
+config *.**.nic.phy80211p.minPowerLevel -94dBm
+config *.**.nic.phy80211p.maxTXPower 100mW
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -95dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.node[*].mobility.x 0
+config *.node[*].mobility.y 0
+config *.node[*].mobility.z 1.895
+config seed-set 0
+config **.seed 0
+config *.node[*].prot.rng-0 2
+config *.node[*].appl.rng-0 3
+config *.node[*].scenario.rng-0 4
+config **.traffic.rng-0 5
+config **.traffic.rng-1 6
+config *.manager.configFile "\"./sumocfg/ring.sumo.cfg\""
+config *.manager.launchConfig "xmldoc(\"./sumocfg/ring.launchd.xml\")"
+config **.numberOfCars 8
+config **.numberOfCarsPerPlatoon 8
+config **.numberOfLanes 1
+config **.dummyvtype "\"vtypeauto\""
+config *.node[*].helper_type "\"PositionHelper\""
+config *.node[*].scenario.caccC1 0.5
+config *.node[*].scenario.caccXi 1
+config *.node[*].scenario.caccOmegaN "0.2 Hz"
+config *.node[*].scenario.caccSpacing "5 m"
+config *.node[*].scenario.engineTau "0.5 s"
+config *.node[*].scenario.ploegH 0.5s
+config *.node[*].scenario.ploegKp 0.2
+config *.node[*].scenario.ploegKd 0.7
+config *.node[*].scenario.useRealisticEngine false
+config **.dummycontroller 0
+config *.node[*].scenario.accHeadway "1 s"
+config *.node[*].scenario.leaderHeadway "1.2 s"
+config *.node[*].scenario.platooningVType "\"vtypeauto\""
+config *.node[*].scenario.leaderSpeed "0 kmph"
+config *.node[*].appl_type "\"SimplePlatooningApp\""
+config *.node[*].appl.*.scalar-recording true
+config *.node[*].appl.*.vector-recording true
+config *.node[*].protocol_type "\"SimplePlatooningBeaconing\""
+config *.node[*].prot.*.scalar-recording true
+config *.node[*].prot.*.vector-recording true
+config *.node[*].prot.beaconingInterval -1s
+config *.node[*].prot.priority 4
+config *.node[*].prot.packetSize 200
+config *.node[*].prot.useControllerAcceleration true
+config **.traffic_type "\"RingTrafficManager\""
+config **.traffic.platooningVType "\"vtypeauto\""
+config **.traffic.nCars 8
+config **.traffic.platoonSize "intuniform(3, 8, 5)"
+config **.traffic.nPlatoons 6
+config **.traffic.nLanes 3
+config **.traffic.platoonInsertTime "1 s"
+config **.traffic.platoonInsertSpeed "uniform(80 kmph, 120 kmph, 6)"
+config **.traffic.platoonInsertDistance "5 m"
+config **.traffic.platoonInsertHeadway "0 s"
+config **.traffic.platoonLeaderHeadway "1.2 s"
+config **.traffic.controller "\"CACC\""
+config **.scalar-recording false
+config **.vector-recording false
+
+vector 0 AutoLaneChange.node[0].appl distance ETV
+vector 1 AutoLaneChange.node[0].appl relativeSpeed ETV
+vector 2 AutoLaneChange.node[0].appl nodeId ETV
+vector 3 AutoLaneChange.node[0].appl acceleration ETV
+vector 4 AutoLaneChange.node[0].appl controllerAcceleration ETV
+vector 5 AutoLaneChange.node[0].appl speed ETV
+vector 6 AutoLaneChange.node[0].appl posx ETV
+vector 7 AutoLaneChange.node[0].appl posy ETV
+vector 8 AutoLaneChange.node[1].appl distance ETV
+vector 9 AutoLaneChange.node[1].appl relativeSpeed ETV
+vector 10 AutoLaneChange.node[1].appl nodeId ETV
+vector 11 AutoLaneChange.node[1].appl acceleration ETV
+vector 12 AutoLaneChange.node[1].appl controllerAcceleration ETV
+vector 13 AutoLaneChange.node[1].appl speed ETV
+vector 14 AutoLaneChange.node[1].appl posx ETV
+vector 15 AutoLaneChange.node[1].appl posy ETV
+vector 16 AutoLaneChange.node[2].appl distance ETV
+vector 17 AutoLaneChange.node[2].appl relativeSpeed ETV
+vector 18 AutoLaneChange.node[2].appl nodeId ETV
+vector 19 AutoLaneChange.node[2].appl acceleration ETV
+vector 20 AutoLaneChange.node[2].appl controllerAcceleration ETV
+vector 21 AutoLaneChange.node[2].appl speed ETV
+vector 22 AutoLaneChange.node[2].appl posx ETV
+vector 23 AutoLaneChange.node[2].appl posy ETV
+vector 24 AutoLaneChange.node[3].appl distance ETV
+vector 25 AutoLaneChange.node[3].appl relativeSpeed ETV
+vector 26 AutoLaneChange.node[3].appl nodeId ETV
+vector 27 AutoLaneChange.node[3].appl acceleration ETV
+vector 28 AutoLaneChange.node[3].appl controllerAcceleration ETV
+vector 29 AutoLaneChange.node[3].appl speed ETV
+vector 30 AutoLaneChange.node[3].appl posx ETV
+vector 31 AutoLaneChange.node[3].appl posy ETV
+vector 32 AutoLaneChange.node[4].appl distance ETV
+vector 33 AutoLaneChange.node[4].appl relativeSpeed ETV
+vector 34 AutoLaneChange.node[4].appl nodeId ETV
+vector 35 AutoLaneChange.node[4].appl acceleration ETV
+vector 36 AutoLaneChange.node[4].appl controllerAcceleration ETV
+vector 37 AutoLaneChange.node[4].appl speed ETV
+vector 38 AutoLaneChange.node[4].appl posx ETV
+vector 39 AutoLaneChange.node[4].appl posy ETV
+vector 40 AutoLaneChange.node[5].appl distance ETV
+vector 41 AutoLaneChange.node[5].appl relativeSpeed ETV
+vector 42 AutoLaneChange.node[5].appl nodeId ETV
+vector 43 AutoLaneChange.node[5].appl acceleration ETV
+vector 44 AutoLaneChange.node[5].appl controllerAcceleration ETV
+vector 45 AutoLaneChange.node[5].appl speed ETV
+vector 46 AutoLaneChange.node[5].appl posx ETV
+vector 47 AutoLaneChange.node[5].appl posy ETV
+vector 48 AutoLaneChange.node[6].appl distance ETV
+vector 49 AutoLaneChange.node[6].appl relativeSpeed ETV
+vector 50 AutoLaneChange.node[6].appl nodeId ETV
+vector 51 AutoLaneChange.node[6].appl acceleration ETV
+vector 52 AutoLaneChange.node[6].appl controllerAcceleration ETV
+vector 53 AutoLaneChange.node[6].appl speed ETV
+vector 54 AutoLaneChange.node[6].appl posx ETV
+vector 55 AutoLaneChange.node[6].appl posy ETV
+vector 56 AutoLaneChange.node[7].appl distance ETV
+vector 57 AutoLaneChange.node[7].appl relativeSpeed ETV
+vector 58 AutoLaneChange.node[7].appl nodeId ETV
+vector 59 AutoLaneChange.node[7].appl acceleration ETV
+vector 60 AutoLaneChange.node[7].appl controllerAcceleration ETV
+vector 61 AutoLaneChange.node[7].appl speed ETV
+vector 62 AutoLaneChange.node[7].appl posx ETV
+vector 63 AutoLaneChange.node[7].appl posy ETV
+vector 64 AutoLaneChange.node[8].appl distance ETV
+vector 65 AutoLaneChange.node[8].appl relativeSpeed ETV
+vector 66 AutoLaneChange.node[8].appl nodeId ETV
+vector 67 AutoLaneChange.node[8].appl acceleration ETV
+vector 68 AutoLaneChange.node[8].appl controllerAcceleration ETV
+vector 69 AutoLaneChange.node[8].appl speed ETV
+vector 70 AutoLaneChange.node[8].appl posx ETV
+vector 71 AutoLaneChange.node[8].appl posy ETV
+vector 72 AutoLaneChange.node[9].appl distance ETV
+vector 73 AutoLaneChange.node[9].appl relativeSpeed ETV
+vector 74 AutoLaneChange.node[9].appl nodeId ETV
+vector 75 AutoLaneChange.node[9].appl acceleration ETV
+vector 76 AutoLaneChange.node[9].appl controllerAcceleration ETV
+vector 77 AutoLaneChange.node[9].appl speed ETV
+vector 78 AutoLaneChange.node[9].appl posx ETV
+vector 79 AutoLaneChange.node[9].appl posy ETV
+vector 80 AutoLaneChange.node[10].appl distance ETV
+vector 81 AutoLaneChange.node[10].appl relativeSpeed ETV
+vector 82 AutoLaneChange.node[10].appl nodeId ETV
+vector 83 AutoLaneChange.node[10].appl acceleration ETV
+vector 84 AutoLaneChange.node[10].appl controllerAcceleration ETV
+vector 85 AutoLaneChange.node[10].appl speed ETV
+vector 86 AutoLaneChange.node[10].appl posx ETV
+vector 87 AutoLaneChange.node[10].appl posy ETV
+vector 88 AutoLaneChange.node[11].appl distance ETV
+vector 89 AutoLaneChange.node[11].appl relativeSpeed ETV
+vector 90 AutoLaneChange.node[11].appl nodeId ETV
+vector 91 AutoLaneChange.node[11].appl acceleration ETV
+vector 92 AutoLaneChange.node[11].appl controllerAcceleration ETV
+vector 93 AutoLaneChange.node[11].appl speed ETV
+vector 94 AutoLaneChange.node[11].appl posx ETV
+vector 95 AutoLaneChange.node[11].appl posy ETV
+vector 96 AutoLaneChange.node[12].appl distance ETV
+vector 97 AutoLaneChange.node[12].appl relativeSpeed ETV
+vector 98 AutoLaneChange.node[12].appl nodeId ETV
+vector 99 AutoLaneChange.node[12].appl acceleration ETV
+vector 100 AutoLaneChange.node[12].appl controllerAcceleration ETV
+vector 101 AutoLaneChange.node[12].appl speed ETV
+vector 102 AutoLaneChange.node[12].appl posx ETV
+vector 103 AutoLaneChange.node[12].appl posy ETV
+vector 104 AutoLaneChange.node[13].appl distance ETV
+vector 105 AutoLaneChange.node[13].appl relativeSpeed ETV
+vector 106 AutoLaneChange.node[13].appl nodeId ETV
+vector 107 AutoLaneChange.node[13].appl acceleration ETV
+vector 108 AutoLaneChange.node[13].appl controllerAcceleration ETV
+vector 109 AutoLaneChange.node[13].appl speed ETV
+vector 110 AutoLaneChange.node[13].appl posx ETV
+vector 111 AutoLaneChange.node[13].appl posy ETV
+vector 112 AutoLaneChange.node[14].appl distance ETV
+vector 113 AutoLaneChange.node[14].appl relativeSpeed ETV
+vector 114 AutoLaneChange.node[14].appl nodeId ETV
+vector 115 AutoLaneChange.node[14].appl acceleration ETV
+vector 116 AutoLaneChange.node[14].appl controllerAcceleration ETV
+vector 117 AutoLaneChange.node[14].appl speed ETV
+vector 118 AutoLaneChange.node[14].appl posx ETV
+vector 119 AutoLaneChange.node[14].appl posy ETV
+vector 120 AutoLaneChange.node[15].appl distance ETV
+vector 121 AutoLaneChange.node[15].appl relativeSpeed ETV
+vector 122 AutoLaneChange.node[15].appl nodeId ETV
+vector 123 AutoLaneChange.node[15].appl acceleration ETV
+vector 124 AutoLaneChange.node[15].appl controllerAcceleration ETV
+vector 125 AutoLaneChange.node[15].appl speed ETV
+vector 126 AutoLaneChange.node[15].appl posx ETV
+vector 127 AutoLaneChange.node[15].appl posy ETV
+vector 128 AutoLaneChange.node[16].appl distance ETV
+vector 129 AutoLaneChange.node[16].appl relativeSpeed ETV
+vector 130 AutoLaneChange.node[16].appl nodeId ETV
+vector 131 AutoLaneChange.node[16].appl acceleration ETV
+vector 132 AutoLaneChange.node[16].appl controllerAcceleration ETV
+vector 133 AutoLaneChange.node[16].appl speed ETV
+vector 134 AutoLaneChange.node[16].appl posx ETV
+vector 135 AutoLaneChange.node[16].appl posy ETV
+vector 136 AutoLaneChange.node[17].appl distance ETV
+vector 137 AutoLaneChange.node[17].appl relativeSpeed ETV
+vector 138 AutoLaneChange.node[17].appl nodeId ETV
+vector 139 AutoLaneChange.node[17].appl acceleration ETV
+vector 140 AutoLaneChange.node[17].appl controllerAcceleration ETV
+vector 141 AutoLaneChange.node[17].appl speed ETV
+vector 142 AutoLaneChange.node[17].appl posx ETV
+vector 143 AutoLaneChange.node[17].appl posy ETV
+vector 144 AutoLaneChange.node[18].appl distance ETV
+vector 145 AutoLaneChange.node[18].appl relativeSpeed ETV
+vector 146 AutoLaneChange.node[18].appl nodeId ETV
+vector 147 AutoLaneChange.node[18].appl acceleration ETV
+vector 148 AutoLaneChange.node[18].appl controllerAcceleration ETV
+vector 149 AutoLaneChange.node[18].appl speed ETV
+vector 150 AutoLaneChange.node[18].appl posx ETV
+vector 151 AutoLaneChange.node[18].appl posy ETV
+vector 152 AutoLaneChange.node[19].appl distance ETV
+vector 153 AutoLaneChange.node[19].appl relativeSpeed ETV
+vector 154 AutoLaneChange.node[19].appl nodeId ETV
+vector 155 AutoLaneChange.node[19].appl acceleration ETV
+vector 156 AutoLaneChange.node[19].appl controllerAcceleration ETV
+vector 157 AutoLaneChange.node[19].appl speed ETV
+vector 158 AutoLaneChange.node[19].appl posx ETV
+vector 159 AutoLaneChange.node[19].appl posy ETV
+vector 160 AutoLaneChange.node[20].appl distance ETV
+vector 161 AutoLaneChange.node[20].appl relativeSpeed ETV
+vector 162 AutoLaneChange.node[20].appl nodeId ETV
+vector 163 AutoLaneChange.node[20].appl acceleration ETV
+vector 164 AutoLaneChange.node[20].appl controllerAcceleration ETV
+vector 165 AutoLaneChange.node[20].appl speed ETV
+vector 166 AutoLaneChange.node[20].appl posx ETV
+vector 167 AutoLaneChange.node[20].appl posy ETV
+vector 168 AutoLaneChange.node[21].appl distance ETV
+vector 169 AutoLaneChange.node[21].appl relativeSpeed ETV
+vector 170 AutoLaneChange.node[21].appl nodeId ETV
+vector 171 AutoLaneChange.node[21].appl acceleration ETV
+vector 172 AutoLaneChange.node[21].appl controllerAcceleration ETV
+vector 173 AutoLaneChange.node[21].appl speed ETV
+vector 174 AutoLaneChange.node[21].appl posx ETV
+vector 175 AutoLaneChange.node[21].appl posy ETV
+vector 176 AutoLaneChange.node[22].appl distance ETV
+vector 177 AutoLaneChange.node[22].appl relativeSpeed ETV
+vector 178 AutoLaneChange.node[22].appl nodeId ETV
+vector 179 AutoLaneChange.node[22].appl acceleration ETV
+vector 180 AutoLaneChange.node[22].appl controllerAcceleration ETV
+vector 181 AutoLaneChange.node[22].appl speed ETV
+vector 182 AutoLaneChange.node[22].appl posx ETV
+vector 183 AutoLaneChange.node[22].appl posy ETV
+vector 184 AutoLaneChange.node[23].appl distance ETV
+vector 185 AutoLaneChange.node[23].appl relativeSpeed ETV
+vector 186 AutoLaneChange.node[23].appl nodeId ETV
+vector 187 AutoLaneChange.node[23].appl acceleration ETV
+vector 188 AutoLaneChange.node[23].appl controllerAcceleration ETV
+vector 189 AutoLaneChange.node[23].appl speed ETV
+vector 190 AutoLaneChange.node[23].appl posx ETV
+vector 191 AutoLaneChange.node[23].appl posy ETV
+vector 192 AutoLaneChange.node[24].appl distance ETV
+vector 193 AutoLaneChange.node[24].appl relativeSpeed ETV
+vector 194 AutoLaneChange.node[24].appl nodeId ETV
+vector 195 AutoLaneChange.node[24].appl acceleration ETV
+vector 196 AutoLaneChange.node[24].appl controllerAcceleration ETV
+vector 197 AutoLaneChange.node[24].appl speed ETV
+vector 198 AutoLaneChange.node[24].appl posx ETV
+vector 199 AutoLaneChange.node[24].appl posy ETV
+vector 200 AutoLaneChange.node[25].appl distance ETV
+vector 201 AutoLaneChange.node[25].appl relativeSpeed ETV
+vector 202 AutoLaneChange.node[25].appl nodeId ETV
+vector 203 AutoLaneChange.node[25].appl acceleration ETV
+vector 204 AutoLaneChange.node[25].appl controllerAcceleration ETV
+vector 205 AutoLaneChange.node[25].appl speed ETV
+vector 206 AutoLaneChange.node[25].appl posx ETV
+vector 207 AutoLaneChange.node[25].appl posy ETV
+vector 208 AutoLaneChange.node[26].appl distance ETV
+vector 209 AutoLaneChange.node[26].appl relativeSpeed ETV
+vector 210 AutoLaneChange.node[26].appl nodeId ETV
+vector 211 AutoLaneChange.node[26].appl acceleration ETV
+vector 212 AutoLaneChange.node[26].appl controllerAcceleration ETV
+vector 213 AutoLaneChange.node[26].appl speed ETV
+vector 214 AutoLaneChange.node[26].appl posx ETV
+vector 215 AutoLaneChange.node[26].appl posy ETV
+vector 216 AutoLaneChange.node[27].appl distance ETV
+vector 217 AutoLaneChange.node[27].appl relativeSpeed ETV
+vector 218 AutoLaneChange.node[27].appl nodeId ETV
+vector 219 AutoLaneChange.node[27].appl acceleration ETV
+vector 220 AutoLaneChange.node[27].appl controllerAcceleration ETV
+vector 221 AutoLaneChange.node[27].appl speed ETV
+vector 222 AutoLaneChange.node[27].appl posx ETV
+vector 223 AutoLaneChange.node[27].appl posy ETV
+vector 224 AutoLaneChange.node[28].appl distance ETV
+vector 225 AutoLaneChange.node[28].appl relativeSpeed ETV
+vector 226 AutoLaneChange.node[28].appl nodeId ETV
+vector 227 AutoLaneChange.node[28].appl acceleration ETV
+vector 228 AutoLaneChange.node[28].appl controllerAcceleration ETV
+vector 229 AutoLaneChange.node[28].appl speed ETV
+vector 230 AutoLaneChange.node[28].appl posx ETV
+vector 231 AutoLaneChange.node[28].appl posy ETV
+vector 232 AutoLaneChange.node[29].appl distance ETV
+vector 233 AutoLaneChange.node[29].appl relativeSpeed ETV
+vector 234 AutoLaneChange.node[29].appl nodeId ETV
+vector 235 AutoLaneChange.node[29].appl acceleration ETV
+vector 236 AutoLaneChange.node[29].appl controllerAcceleration ETV
+vector 237 AutoLaneChange.node[29].appl speed ETV
+vector 238 AutoLaneChange.node[29].appl posx ETV
+vector 239 AutoLaneChange.node[29].appl posy ETV
+vector 240 AutoLaneChange.node[30].appl distance ETV
+vector 241 AutoLaneChange.node[30].appl relativeSpeed ETV
+vector 242 AutoLaneChange.node[30].appl nodeId ETV
+vector 243 AutoLaneChange.node[30].appl acceleration ETV
+vector 244 AutoLaneChange.node[30].appl controllerAcceleration ETV
+vector 245 AutoLaneChange.node[30].appl speed ETV
+vector 246 AutoLaneChange.node[30].appl posx ETV
+vector 247 AutoLaneChange.node[30].appl posy ETV
+vector 248 AutoLaneChange.node[0].prot nodeId ETV
+vector 249 AutoLaneChange.node[0].prot busyTime ETV
+vector 250 AutoLaneChange.node[0].prot collisions ETV
+vector 251 AutoLaneChange.node[1].prot nodeId ETV
+vector 252 AutoLaneChange.node[1].prot busyTime ETV
+vector 253 AutoLaneChange.node[1].prot collisions ETV
+vector 254 AutoLaneChange.node[2].prot nodeId ETV
+vector 255 AutoLaneChange.node[2].prot busyTime ETV
+vector 256 AutoLaneChange.node[2].prot collisions ETV
+vector 257 AutoLaneChange.node[3].prot nodeId ETV
+vector 258 AutoLaneChange.node[3].prot busyTime ETV
+vector 259 AutoLaneChange.node[3].prot collisions ETV
+vector 260 AutoLaneChange.node[4].prot nodeId ETV
+vector 261 AutoLaneChange.node[4].prot busyTime ETV
+vector 262 AutoLaneChange.node[4].prot collisions ETV
+vector 263 AutoLaneChange.node[5].prot nodeId ETV
+vector 264 AutoLaneChange.node[5].prot busyTime ETV
+vector 265 AutoLaneChange.node[5].prot collisions ETV
+vector 266 AutoLaneChange.node[6].prot nodeId ETV
+vector 267 AutoLaneChange.node[6].prot busyTime ETV
+vector 268 AutoLaneChange.node[6].prot collisions ETV
+vector 269 AutoLaneChange.node[7].prot nodeId ETV
+vector 270 AutoLaneChange.node[7].prot busyTime ETV
+vector 271 AutoLaneChange.node[7].prot collisions ETV
+vector 272 AutoLaneChange.node[8].prot nodeId ETV
+vector 273 AutoLaneChange.node[8].prot busyTime ETV
+vector 274 AutoLaneChange.node[8].prot collisions ETV
+vector 275 AutoLaneChange.node[9].prot nodeId ETV
+vector 276 AutoLaneChange.node[9].prot busyTime ETV
+vector 277 AutoLaneChange.node[9].prot collisions ETV
+vector 278 AutoLaneChange.node[10].prot nodeId ETV
+vector 279 AutoLaneChange.node[10].prot busyTime ETV
+vector 280 AutoLaneChange.node[10].prot collisions ETV
+vector 281 AutoLaneChange.node[11].prot nodeId ETV
+vector 282 AutoLaneCha

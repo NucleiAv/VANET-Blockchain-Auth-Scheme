@@ -1,0 +1,195 @@
+                                                                
+version 3
+run Sinusoidal-0-20240816-19:35:37-10161
+attr configname Sinusoidal
+attr datetime 20240816-19:35:37
+attr datetimef 20240816-193537
+attr experiment Sinusoidal
+attr inifile omnetpp.ini
+attr iterationvars "$nCars=8, $platoonSize=8, $nLanes=1, $humanCars=1, $humanLanes=1, $ploegH=0.5, $controller=0, $headway=0.3, $leaderHeadway=1.2, $leaderSpeed=100, $beaconInterval=0.1, $priority=4, $packetSize=200, $0=2, $1=0.3, $sController=\"ACC\""
+attr iterationvarsd nCars=8/platoonSize=8/nLanes=1/humanCars=1/humanLanes=1/ploegH=0.5/controller=0/headway=0.3/leaderHeadway=1.2/leaderSpeed=100/beaconInterval=0.1/priority=4/packetSize=200/2/0.3/sController=ACC
+attr iterationvarsf nCars=8,platoonSize=8,nLanes=1,humanCars=1,humanLanes=1,ploegH=0.5,controller=0,headway=0.3,leaderHeadway=1.2,leaderSpeed=100,beaconInterval=0.1,priority=4,packetSize=200,2,0.3,sController=ACC-
+attr measurement "$nCars=8, $platoonSize=8, $nLanes=1, $humanCars=1, $humanLanes=1, $ploegH=0.5, $controller=0, $headway=0.3, $leaderHeadway=1.2, $leaderSpeed=100, $beaconInterval=0.1, $priority=4, $packetSize=200, $0=2, $1=0.3, $sController=\"ACC\""
+attr network Human
+attr processid 10161
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+itervar beaconInterval 0.1
+itervar controller 0
+itervar headway 0.3
+itervar humanCars 1
+itervar humanLanes 1
+itervar leaderHeadway 1.2
+itervar leaderSpeed 100
+itervar nCars 8
+itervar nLanes 1
+itervar packetSize 200
+itervar platoonSize 8
+itervar ploegH 0.5
+itervar priority 4
+itervar sController "\"ACC\""
+config image-path ../../../veins/images
+config repeat 1
+config *.manager.command "\"sumo-gui\""
+config *.manager.ignoreGuiCommands false
+config *.node[*].scenario_type "\"SinusoidalScenario\""
+config *.node[*].scenario.leaderOscillationFrequency "0.2 Hz"
+config *.node[*].scenario.oscillationAmplitude "10 kmph"
+config *.node[*].scenario.startOscillating "5 s"
+config output-vector-file results/Sinusoidal_0_0.3_0.vec
+config output-scalar-file results/Sinusoidal_0_0.3_0.sca
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 10s
+config num-rngs 6
+config network Human
+config debug-on-errors true
+config print-undisposed true
+config *.playgroundSizeX 65000m
+config *.playgroundSizeY 25000m
+config *.playgroundSizeZ 50m
+config sim-time-limit "120 s"
+config *.annotations.draw false
+config *.obstacles.debug false
+config *.world.useTorus false
+config *.world.use2D false
+config *.manager.updateInterval 0.01s
+config *.manager.host "\"localhost\""
+config *.manager.moduleType "\"vtypeauto=org.car2x.plexe.PlatoonCar vtypehuman=HumanCar\""
+config *.manager.moduleName "\"vtypeauto=node vtypehuman=human\""
+config *.manager.moduleDisplayString "\"\""
+config *.manager.autoShutdown true
+config *.manager.margin 25
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 100mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.mac1609_4.useAcks true
+config *.**.nic.mac1609_4.ackErrorRate 0.0
+config *.**.nic.mac1609_4.frameErrorRate 0.0
+config *.**.nic.phy80211p.minPowerLevel -94dBm
+config *.**.nic.phy80211p.maxTXPower 100mW
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -95dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.node[*].mobility.x 0
+config *.node[*].mobility.y 0
+config *.node[*].mobility.z 1.895
+config *.human[*].mobility.x 0
+config *.human[*].mobility.y 0
+config *.human[*].mobility.z 1.895
+config seed-set 0
+config **.seed 0
+config *.node[*].prot.rng-0 2
+config *.node[*].appl.rng-0 3
+config *.node[*].scenario.rng-0 4
+config **.traffic.rng-0 5
+config *.manager.configFile "\"./sumocfg/freeway.sumo.cfg\""
+config *.manager.launchConfig "xmldoc(\"./sumocfg/freeway.launchd.xml\")"
+config **.numberOfCars 8
+config **.numberOfCarsPerPlatoon 8
+config **.numberOfLanes 1
+config **.numberOfHumanCars 1
+config **.numberOfHumanLanes 1
+config *.node[*].helper_type "\"PositionHelper\""
+config *.node[*].scenario.caccC1 0.5
+config *.node[*].scenario.caccXi 1
+config *.node[*].scenario.caccOmegaN "0.2 Hz"
+config *.node[*].scenario.caccSpacing "5 m"
+config *.node[*].scenario.engineTau "0.5 s"
+config *.node[*].scenario.ploegH 0.5s
+config *.node[*].scenario.ploegKp 0.2
+config *.node[*].scenario.ploegKd 0.7
+config *.node[*].scenario.useRealisticEngine false
+config *.node[*].scenario.nLanes 1
+config **.numericController 0
+config **.headway 0.3s
+config *.node[*].scenario.accHeadway 0.3s
+config *.node[*].scenario.leaderHeadway 1.2s
+config *.node[*].scenario.leaderSpeed 100kmph
+config *.node[*].appl_type "\"SimplePlatooningApp\""
+config *.node[*].appl.*.scalar-recording true
+config *.node[*].appl.*.vector-recording true
+config *.node[*].protocol_type "\"SimplePlatooningBeaconing\""
+config *.node[*].prot.*.scalar-recording true
+config *.node[*].prot.*.vector-recording true
+config *.node[*].prot.beaconingInterval 0.1s
+config *.node[*].prot.priority 4
+config *.node[*].prot.packetSize 200
+config *.node[*].prot.useControllerAcceleration true
+config *.human[*].prot.beaconingInterval "0.1 s"
+config *.human[*].prot.priority 4
+config *.human[*].prot.packetSize 200
+config *.human[*].prot.txPower "100 mW"
+config *.human[*].prot.bitrate "3 Mbps"
+config **.traffic_type "\"PlatoonsPlusHumanTraffic\""
+config **.traffic.platoonInsertTime "1 s"
+config **.traffic.platoonInsertSpeed 100kmph
+config **.traffic.nCars 8
+config **.traffic.humanCars 1
+config **.traffic.platoonSize 8
+config **.traffic.nLanes 1
+config **.traffic.humanLanes 1
+config **.traffic.platooningVType "\"vtypeauto\""
+config **.traffic.humanVType "\"vtypehuman\""
+config **.traffic.platoonInsertDistance 2m
+config **.traffic.platoonInsertHeadway 0.3s
+config **.traffic.platoonLeaderHeadway 1.2s
+config **.traffic.controller "\"ACC\""
+config **.scalar-recording false
+config **.vector-recording false
+
+vector 0 Human.node[0].appl distance ETV
+vector 1 Human.node[0].appl relativeSpeed ETV
+vector 2 Human.node[0].appl nodeId ETV
+vector 3 Human.node[0].appl acceleration ETV
+vector 4 Human.node[0].appl controllerAcceleration ETV
+vector 5 Human.node[0].appl speed ETV
+vector 6 Human.node[0].appl posx ETV
+vector 7 Human.node[0].appl posy ETV
+vector 8 Human.node[1].appl distance ETV
+vector 9 Human.node[1].appl relativeSpeed ETV
+vector 10 Human.node[1].appl nodeId ETV
+vector 11 Human.node[1].appl acceleration ETV
+vector 12 Human.node[1].appl controllerAcceleration ETV
+vector 13 Human.node[1].appl speed ETV
+vector 14 Human.node[1].appl posx ETV
+vector 15 Human.node[1].appl posy ETV
+vector 16 Human.node[2].appl distance ETV
+vector 17 Human.node[2].appl relativeSpeed ETV
+vector 18 Human.node[2].appl nodeId ETV
+vector 19 Human.node[2].appl acceleration ETV
+vector 20 Human.node[2].appl controllerAcceleration ETV
+vector 21 Human.node[2].appl speed ETV
+vector 22 Human.node[2].appl posx ETV
+vector 23 Human.node[2].appl posy ETV
+vector 24 Human.node[3].appl distance ETV
+vector 25 Human.node[3].appl relativeSpeed ETV
+vector 26 Human.node[3].appl nodeId ETV
+vector 27 Human.node[3].appl acceleration ETV
+vector 28 Human.node[3].appl controllerAcceleration ETV
+vector 29 Human.node[3].appl speed ETV
+vector 30 Human.node[3].appl posx ETV
+vector 31 Human.node[3].appl posy ETV
+vector 32 Human.node[4].appl distance ETV
+vector 33 Human.node[4].appl relativeSpeed ETV
+vector 34 Human.node[4].appl nodeId ETV
+vector 35 Human.node[4].appl acceleration ETV
+vector 36 Human.node[4].appl controllerAcceleration ETV
+vector 37 Human.node[4].appl speed ETV
+vector 38 Human.node[4].appl posx ETV
+vector 39 Human.node[4].appl posy ETV
+vector 40 Human.node[5].appl distance ETV
+vector 41 Human.node[5].appl relativeSpeed ETV
+vector 42 Human.node[5].appl nodeId ETV
+vector 43 Human.node[5].appl acceleration ETV
+vector 44 Human.node[5].appl controllerAcceleration ETV
+vector 45 Human.node[5].appl speed ETV
+vector 46 Human.

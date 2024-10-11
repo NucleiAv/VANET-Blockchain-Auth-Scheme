@@ -1,0 +1,189 @@
+version 3
+run Platooning-1-20240816-19:32:04-9775
+attr configname Platooning
+attr datetime 20240816-19:32:04
+attr datetimef 20240816-193204
+attr experiment Platooning
+attr inifile omnetpp.ini
+attr iterationvars "$nCars=8, $platoonSize=8, $nLanes=1, $ploegH=0.5, $controller=0, $headway=1.2, $leaderHeadway=1.2, $leaderSpeed=100, $beaconInterval=0.1, $priority=4, $packetSize=200, $sController=\"ACC\", $0=2, $1=1.2"
+attr iterationvarsd nCars=8/platoonSize=8/nLanes=1/ploegH=0.5/controller=0/headway=1.2/leaderHeadway=1.2/leaderSpeed=100/beaconInterval=0.1/priority=4/packetSize=200/sController=ACC/2/1.2
+attr iterationvarsf nCars=8,platoonSize=8,nLanes=1,ploegH=0.5,controller=0,headway=1.2,leaderHeadway=1.2,leaderSpeed=100,beaconInterval=0.1,priority=4,packetSize=200,sController=ACC,2,1.2-
+attr measurement "$nCars=8, $platoonSize=8, $nLanes=1, $ploegH=0.5, $controller=0, $headway=1.2, $leaderHeadway=1.2, $leaderSpeed=100, $beaconInterval=0.1, $priority=4, $packetSize=200, $sController=\"ACC\", $0=2, $1=1.2"
+attr network Platooning
+attr processid 9775
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 1
+attr seedset 0
+itervar beaconInterval 0.1
+itervar controller 0
+itervar headway 1.2
+itervar leaderHeadway 1.2
+itervar leaderSpeed 100
+itervar nCars 8
+itervar nLanes 1
+itervar packetSize 200
+itervar platoonSize 8
+itervar ploegH 0.5
+itervar priority 4
+itervar sController "\"ACC\""
+config image-path ../../../veins/images
+config *.manager.command "\"sumo-gui\""
+config *.node[*].scenario_type "\"SimpleScenario\""
+config output-vector-file results/Platooning_0_1.2_0.vec
+config output-scalar-file results/Platooning_0_1.2_0.sca
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 10s
+config num-rngs 6
+config network Platooning
+config debug-on-errors true
+config print-undisposed true
+config *.playgroundSizeX 65000m
+config *.playgroundSizeY 25000m
+config *.playgroundSizeZ 50m
+config sim-time-limit "60 s"
+config *.annotations.draw false
+config *.obstacles.debug false
+config *.world.useTorus false
+config *.world.use2D false
+config *.manager.updateInterval 0.01s
+config *.manager.host "\"localhost\""
+config *.manager.moduleType "\"org.car2x.plexe.PlatoonCar\""
+config *.manager.moduleName "\"node\""
+config *.manager.moduleDisplayString "\"\""
+config *.manager.autoShutdown true
+config *.manager.margin 25
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 100mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.mac1609_4.useAcks true
+config *.**.nic.mac1609_4.ackErrorRate 0.0
+config *.**.nic.mac1609_4.frameErrorRate 0.0
+config *.**.nic.phy80211p.minPowerLevel -94dBm
+config *.**.nic.phy80211p.maxTXPower 100mW
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -95dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.node[*].mobility.x 0
+config *.node[*].mobility.y 0
+config *.node[*].mobility.z 1.895
+config seed-set 0
+config **.seed 0
+config *.node[*].prot.rng-0 2
+config *.node[*].appl.rng-0 3
+config *.node[*].scenario.rng-0 4
+config **.traffic.rng-0 5
+config *.manager.configFile "\"./sumocfg/freeway.sumo.cfg\""
+config *.manager.launchConfig "xmldoc(\"./sumocfg/freeway.launchd.xml\")"
+config **.numberOfCars 8
+config **.numberOfCarsPerPlatoon 8
+config **.numberOfLanes 1
+config *.node[*].helper_type "\"PositionHelper\""
+config *.node[*].scenario.caccC1 0.5
+config *.node[*].scenario.caccXi 1
+config *.node[*].scenario.caccOmegaN "0.2 Hz"
+config *.node[*].scenario.caccSpacing "5 m"
+config *.node[*].scenario.engineTau "0.5 s"
+config *.node[*].scenario.ploegH 0.5s
+config *.node[*].scenario.ploegKp 0.2
+config *.node[*].scenario.ploegKd 0.7
+config *.node[*].scenario.useRealisticEngine false
+config *.node[*].scenario.useControllerAcceleration true
+config *.node[*].scenario.nLanes 1
+config **.numericController 0
+config **.headway 1.2s
+config *.node[*].scenario.accHeadway 1.2s
+config *.node[*].scenario.leaderHeadway 1.2s
+config *.node[*].scenario.leaderSpeed 100kmph
+config *.node[*].appl_type "\"SimplePlatooningApp\""
+config *.node[*].appl.*.scalar-recording true
+config *.node[*].appl.*.vector-recording true
+config *.node[*].protocol_type "\"SimplePlatooningBeaconing\""
+config *.node[*].prot.*.scalar-recording true
+config *.node[*].prot.*.vector-recording true
+config *.node[*].prot.beaconingInterval 0.1s
+config *.node[*].prot.priority 4
+config *.node[*].prot.packetSize 200
+config **.traffic_type "\"PlatoonsTrafficManager\""
+config **.traffic.platoonInsertTime "1 s"
+config **.traffic.platoonInsertSpeed 100kmph
+config **.traffic.nCars 8
+config **.traffic.platoonSize 8
+config **.traffic.nLanes 1
+config **.traffic.platooningVType "\"vtypeauto\""
+config **.traffic.controller "\"ACC\""
+config **.traffic.platoonInsertDistance 2m
+config **.traffic.platoonInsertHeadway 1.2s
+config **.traffic.platoonLeaderHeadway 1.2s
+config **.scalar-recording false
+config **.vector-recording false
+
+vector 0 Platooning.node[0].appl distance ETV
+vector 1 Platooning.node[0].appl relativeSpeed ETV
+vector 2 Platooning.node[0].appl nodeId ETV
+vector 3 Platooning.node[0].appl acceleration ETV
+vector 4 Platooning.node[0].appl controllerAcceleration ETV
+vector 5 Platooning.node[0].appl speed ETV
+vector 6 Platooning.node[0].appl posx ETV
+vector 7 Platooning.node[0].appl posy ETV
+vector 8 Platooning.node[1].appl distance ETV
+vector 9 Platooning.node[1].appl relativeSpeed ETV
+vector 10 Platooning.node[1].appl nodeId ETV
+vector 11 Platooning.node[1].appl acceleration ETV
+vector 12 Platooning.node[1].appl controllerAcceleration ETV
+vector 13 Platooning.node[1].appl speed ETV
+vector 14 Platooning.node[1].appl posx ETV
+vector 15 Platooning.node[1].appl posy ETV
+vector 16 Platooning.node[2].appl distance ETV
+vector 17 Platooning.node[2].appl relativeSpeed ETV
+vector 18 Platooning.node[2].appl nodeId ETV
+vector 19 Platooning.node[2].appl acceleration ETV
+vector 20 Platooning.node[2].appl controllerAcceleration ETV
+vector 21 Platooning.node[2].appl speed ETV
+vector 22 Platooning.node[2].appl posx ETV
+vector 23 Platooning.node[2].appl posy ETV
+vector 24 Platooning.node[3].appl distance ETV
+vector 25 Platooning.node[3].appl relativeSpeed ETV
+vector 26 Platooning.node[3].appl nodeId ETV
+vector 27 Platooning.node[3].appl acceleration ETV
+vector 28 Platooning.node[3].appl controllerAcceleration ETV
+vector 29 Platooning.node[3].appl speed ETV
+vector 30 Platooning.node[3].appl posx ETV
+vector 31 Platooning.node[3].appl posy ETV
+vector 32 Platooning.node[4].appl distance ETV
+vector 33 Platooning.node[4].appl relativeSpeed ETV
+vector 34 Platooning.node[4].appl nodeId ETV
+vector 35 Platooning.node[4].appl acceleration ETV
+vector 36 Platooning.node[4].appl controllerAcceleration ETV
+vector 37 Platooning.node[4].appl speed ETV
+vector 38 Platooning.node[4].appl posx ETV
+vector 39 Platooning.node[4].appl posy ETV
+vector 40 Platooning.node[5].appl distance ETV
+vector 41 Platooning.node[5].appl relativeSpeed ETV
+vector 42 Platooning.node[5].appl nodeId ETV
+vector 43 Platooning.node[5].appl acceleration ETV
+vector 44 Platooning.node[5].appl controllerAcceleration ETV
+vector 45 Platooning.node[5].appl speed ETV
+vector 46 Platooning.node[5].appl posx ETV
+vector 47 Platooning.node[5].appl posy ETV
+vector 48 Platooning.node[6].appl distance ETV
+vector 49 Platooning.node[6].appl relativeSpeed ETV
+vector 50 Platooning.node[6].appl nodeId ETV
+vector 51 Platooning.node[6].appl acceleration ETV
+vector 52 Platooning.node[6].appl controllerAcceleration ETV
+vector 53 Platooning.node[6].appl speed ETV
+vector 54 Platooning.node[6].appl posx ETV
+vector 55 Platooning.node[6].appl posy ETV
+vector 56 Platooning.node[7].appl distance ETV
+vector 57 Platooning.node[7].appl relativeSpeed ETV
+vector 58 Platooning.node[7].appl nodeId ETV
+vector 59 Platooning.node[7].appl acceleration ETV
+vector 60 Platooning.node[7].appl controllerAcceleration ETV
+vector 61 Plato

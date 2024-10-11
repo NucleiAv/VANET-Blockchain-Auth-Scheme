@@ -1,0 +1,352 @@
+version 3
+run EngineTest-0-20240816-19:37:24-10375
+attr configname EngineTest
+attr datetime 20240816-19:37:24
+attr datetimef 20240816-193724
+attr experiment EngineTest
+attr inifile omnetpp.ini
+attr iterationvars "$vehicle=0, $model=\"alfa-147\", $useLaunchd=false, $nCars=8, $platoonSize=8, $nLanes=1, $ploegH=0.5, $beaconInterval=0.1, $priority=4, $packetSize=200"
+attr iterationvarsd vehicle=0/model=alfa-147/useLaunchd=false/nCars=8/platoonSize=8/nLanes=1/ploegH=0.5/beaconInterval=0.1/priority=4/packetSize=200
+attr iterationvarsf vehicle=0,model=alfa-147,useLaunchd=false,nCars=8,platoonSize=8,nLanes=1,ploegH=0.5,beaconInterval=0.1,priority=4,packetSize=200-
+attr measurement "$vehicle=0, $model=\"alfa-147\", $useLaunchd=false, $nCars=8, $platoonSize=8, $nLanes=1, $ploegH=0.5, $beaconInterval=0.1, $priority=4, $packetSize=200"
+attr network Engine
+attr processid 10375
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+itervar beaconInterval 0.1
+itervar model "\"alfa-147\""
+itervar nCars 8
+itervar nLanes 1
+itervar packetSize 200
+itervar platoonSize 8
+itervar ploegH 0.5
+itervar priority 4
+itervar useLaunchd false
+itervar vehicle 0
+config image-path ../../../veins/images
+config repeat 1
+config *.manager.command "\"sumo-gui\""
+config *.manager.ignoreGuiCommands false
+config *.node[*].scenario_type "\"AccelerateAndBrakeScenario\""
+config sim-time-limit "100 s"
+config *.node[*].scenario.acceleration "20 mpsps"
+config *.node[*].scenario.brakingDeceleration "20 mpsps"
+config *.node[*].scenario.startAccelerating "5 s"
+config *.node[*].scenario.startBraking "75 s"
+config **.dummyvehicle 0
+config *.node[*].scenario.vehicleType "\"alfa-147\""
+config output-vector-file results/EngineTest_0_0.vec
+config output-scalar-file results/EngineTest_0_0.sca
+config cmdenv-express-mode true
+config cmdenv-autoflush true
+config cmdenv-status-frequency 10s
+config num-rngs 6
+config network Engine
+config debug-on-errors true
+config print-undisposed true
+config *.playgroundSizeX 65000m
+config *.playgroundSizeY 25000m
+config *.playgroundSizeZ 50m
+config sim-time-limit "120 s"
+config *.annotations.draw false
+config *.obstacles.debug false
+config *.world.useTorus false
+config *.world.use2D false
+config *.manager.updateInterval 0.01s
+config *.manager.host "\"localhost\""
+config *.manager.moduleType "\"org.car2x.plexe.PlatoonCar\""
+config *.manager.moduleName "\"node\""
+config *.manager.moduleDisplayString "\"\""
+config *.manager.autoShutdown true
+config *.manager.margin 25
+config *.connectionManager.sendDirect true
+config *.connectionManager.maxInterfDist 2600m
+config *.connectionManager.drawMaxIntfDist false
+config *.**.nic.mac1609_4.useServiceChannel false
+config *.**.nic.mac1609_4.txPower 100mW
+config *.**.nic.mac1609_4.bitrate 6Mbps
+config *.**.nic.mac1609_4.useAcks true
+config *.**.nic.mac1609_4.ackErrorRate 0.0
+config *.**.nic.mac1609_4.frameErrorRate 0.0
+config *.**.nic.phy80211p.minPowerLevel -94dBm
+config *.**.nic.phy80211p.maxTXPower 100mW
+config *.**.nic.phy80211p.useNoiseFloor true
+config *.**.nic.phy80211p.noiseFloor -95dBm
+config *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+config *.**.nic.phy80211p.usePropagationDelay true
+config *.node[*].mobility.x 0
+config *.node[*].mobility.y 0
+config *.node[*].mobility.z 1.895
+config seed-set 0
+config **.seed 0
+config *.node[*].prot.rng-0 2
+config *.node[*].appl.rng-0 3
+config *.node[*].scenario.rng-0 4
+config **.traffic.rng-0 5
+config *.manager.configFile "\"./sumocfg/freeway.sumo.cfg\""
+config *.manager.launchConfig "xmldoc(\"./sumocfg/freeway.launchd.xml\")"
+config *.useLaunchd false
+config *.node[*].scenario.vehicleFile "false ? \"./vehicles.xml\" : \"./sumocfg/vehicles.xml\""
+config **.numberOfCars 8
+config **.numberOfCarsPerPlatoon 8
+config **.numberOfLanes 1
+config *.node[*].helper_type "\"PositionHelper\""
+config *.node[*].helper.nLanes 1
+config *.node[*].helper.platoonSize 8
+config *.node[*].helper.nCars 8
+config *.node[*].scenario.engineTau "0.5 s"
+config *.node[*].scenario.ploegH 0.5s
+config *.node[*].scenario.ploegKp 0.2
+config *.node[*].scenario.ploegKd 0.7
+config *.node[*].scenario.useRealisticEngine true
+config *.node[*].scenario.accHeadway "1 s"
+config *.node[*].scenario.leaderHeadway "1 s"
+config *.node[*].scenario.leaderSpeed "0 kmph"
+config *.node[*].appl_type "\"SimplePlatooningApp\""
+config *.node[*].appl.*.scalar-recording true
+config *.node[*].appl.*.vector-recording true
+config *.node[*].protocol_type "\"SimplePlatooningBeaconing\""
+config *.node[*].prot.*.scalar-recording true
+config *.node[*].prot.*.vector-recording true
+config *.node[*].prot.beaconingInterval 0.1s
+config *.node[*].prot.priority 4
+config *.node[*].prot.packetSize 200
+config *.node[*].prot.useControllerAcceleration true
+config **.traffic_type "\"PlatoonsTrafficManager\""
+config **.traffic.platoonInsertTime "1 s"
+config **.traffic.platoonInsertSpeed "0 kmph"
+config **.traffic.nCars 1
+config **.traffic.platoonSize 1
+config **.traffic.nLanes 1
+config **.traffic.platooningVType "\"vtypeauto\""
+config **.traffic.platoonInsertDistance "1 m"
+config **.traffic.platoonInsertHeadway "1 s"
+config **.traffic.platoonLeaderHeadway "1 s"
+config **.traffic.controller "\"ACC\""
+config **.scalar-recording false
+config **.vector-recording false
+
+par Engine.annotations typename "\"org.car2x.veins.modules.world.annotations.AnnotationManager\""
+par Engine.annotations draw false
+par Engine.annotations annotations "<annotations/> at content:1"
+par Engine.connectionManager typename "\"org.car2x.veins.base.connectionManager.ConnectionManager\""
+par Engine.connectionManager sendDirect true
+par Engine.connectionManager maxInterfDist 2600m
+attr unit m
+par Engine.connectionManager drawMaxIntfDist false
+par Engine.world typename "\"org.car2x.veins.base.modules.BaseWorldUtility\""
+par Engine.world playgroundSizeX 65000m
+attr unit m
+par Engine.world playgroundSizeY 25000m
+attr unit m
+par Engine.world playgroundSizeZ 50m
+attr unit m
+par Engine.world useTorus false
+par Engine.world use2D false
+par Engine.manager typename "\"org.car2x.plexe.traci.PlexeScenarioManagerForker\""
+par Engine.manager connectAt 0s
+attr unit s
+par Engine.manager firstStepAt -1s
+attr unit s
+par Engine.manager updateInterval 0.01s
+attr unit s
+par Engine.manager moduleType "\"org.car2x.plexe.PlatoonCar\""
+par Engine.manager moduleName "\"node\""
+par Engine.manager moduleDisplayString "\"\""
+par Engine.manager trafficLightModuleType "\"\""
+par Engine.manager trafficLightModuleName "\"tls\""
+par Engine.manager trafficLightFilter "\"\""
+par Engine.manager trafficLightModuleDisplayString "\"i=misc/node2;is=vs;r=0,,#707070,1\""
+par Engine.manager host "\"localhost\""
+par Engine.manager port -1
+par Engine.manager seed 0
+par Engine.manager autoShutdown true
+par Engine.manager margin 25
+par Engine.manager roiRoads "\"\""
+par Engine.manager roiRects "\"\""
+par Engine.manager penetrationRate 1
+par Engine.manager ignoreGuiCommands false
+par Engine.manager commandLine "\"$command --remote-port $port --seed $seed --configuration-file $configFile\""
+par Engine.manager command "\"sumo-gui\""
+par Engine.manager configFile "\"./sumocfg/freeway.sumo.cfg\""
+par Engine.manager order -1
+par Engine.manager ignoreUnknownSubscriptionResults false
+par Engine.plexe typename "\"org.car2x.plexe.PlexeManager\""
+par Engine.traffic typename "\"org.car2x.plexe.traffic.PlatoonsTrafficManager\""
+par Engine.traffic controller "\"ACC\""
+par Engine.traffic platoonInsertTime 1s
+attr unit s
+par Engine.traffic platoonInsertSpeed 0kmph
+attr unit kmph
+par Engine.traffic nCars 1
+par Engine.traffic platoonSize 1
+par Engine.traffic nLanes 1
+par Engine.traffic platooningVType "\"vtypeauto\""
+par Engine.traffic platoonInsertDistance 1m
+attr unit m
+par Engine.traffic platoonInsertHeadway 1s
+attr unit s
+par Engine.traffic platoonLeaderHeadway 1s
+attr unit s
+par Engine.traffic platoonAdditionalDistance 0m
+attr unit m
+par Engine.node[0].helper typename "\"org.car2x.plexe.utilities.PositionHelper\""
+par Engine.node[0].scenario typename "\"org.car2x.plexe.scenarios.AccelerateAndBrakeScenario\""
+par Engine.node[0].scenario leaderSpeed 0kmph
+attr unit kmph
+par Engine.node[0].scenario accHeadway 1s
+attr unit s
+par Engine.node[0].scenario leaderHeadway 1s
+attr unit s
+par Engine.node[0].scenario caccXi 1
+par Engine.node[0].scenario caccOmegaN 0.2Hz
+attr unit Hz
+par Engine.node[0].scenario caccC1 0.5
+par Engine.node[0].scenario caccSpacing 5m
+attr unit m
+par Engine.node[0].scenario engineTau 0.5s
+attr unit s
+par Engine.node[0].scenario uMin -1e+06mpsps
+attr unit mpsps
+par Engine.node[0].scenario uMax 1e+06mpsps
+attr unit mpsps
+par Engine.node[0].scenario ploegH 0.5s
+attr unit s
+par Engine.node[0].scenario ploegKp 0.2
+par Engine.node[0].scenario ploegKd 0.7
+par Engine.node[0].scenario flatbedKa 2.4
+par Engine.node[0].scenario flatbedKv 0.6
+par Engine.node[0].scenario flatbedKp 12
+par Engine.node[0].scenario flatbedH 4
+par Engine.node[0].scenario flatbedD 5
+par Engine.node[0].scenario useControllerAcceleration true
+par Engine.node[0].scenario usePrediction true
+par Engine.node[0].scenario vehicleFile "\"./sumocfg/vehicles.xml\""
+par Engine.node[0].scenario useRealisticEngine true
+par Engine.node[0].scenario vehicleType "\"alfa-147\""
+par Engine.node[0].scenario headerLength 0bit
+attr unit bit
+par Engine.node[0].scenario brakingDeceleration 20mpsps
+attr unit mpsps
+par Engine.node[0].scenario acceleration 20mpsps
+attr unit mpsps
+par Engine.node[0].scenario startAccelerating 5s
+attr unit s
+par Engine.node[0].scenario startBraking 75s
+attr unit s
+par Engine.node[0].appl typename "\"org.car2x.plexe.apps.SimplePlatooningApp\""
+par Engine.node[0].appl headerLength 0bit
+attr unit bit
+par Engine.node[0].prot typename "\"org.car2x.plexe.protocols.SimplePlatooningBeaconing\""
+par Engine.node[0].prot beaconingInterval 0.1seconds
+attr unit seconds
+par Engine.node[0].prot priority 4
+par Engine.node[0].prot packetSize 200
+par Engine.node[0].prot headerLength 0bit
+attr unit bit
+par Engine.node[0].veins11pDriver typename "\"org.car2x.plexe.driver.Veins11pRadioDriver\""
+par Engine.node[0].veins11pDriver headerLength 0bit
+attr unit bit
+par Engine.node[0].nic.phy80211p typename "\"org.car2x.veins.modules.phy.PhyLayer80211p\""
+par Engine.node[0].nic.phy80211p recordStats false
+par Engine.node[0].nic.phy80211p usePropagationDelay true
+par Engine.node[0].nic.phy80211p noiseFloor -95dBm
+attr unit dBm
+par Engine.node[0].nic.phy80211p useNoiseFloor true
+par Engine.node[0].nic.phy80211p antenna "<root>...</root> at content:1"
+par Engine.node[0].nic.phy80211p antennaOffsetX 0m
+attr unit m
+par Engine.node[0].nic.phy80211p antennaOffsetY 0m
+attr unit m
+par Engine.node[0].nic.phy80211p antennaOffsetZ 1.895m
+attr unit m
+par Engine.node[0].nic.phy80211p antennaOffsetYaw 0rad
+attr unit rad
+par Engine.node[0].nic.phy80211p analogueModels "<root>...</root> at /media/nsen/misc-585/omnet/plexe/examples/engine//config.xml:32"
+par Engine.node[0].nic.phy80211p decider "<root>...</root> at /media/nsen/misc-585/omnet/plexe/examples/engine//config.xml:32"
+par Engine.node[0].nic.phy80211p minPowerLevel -94dBm
+attr unit dBm
+par Engine.node[0].nic.phy80211p timeRXToTX 0s
+attr unit s
+par Engine.node[0].nic.phy80211p timeRXToSleep 0s
+attr unit s
+par Engine.node[0].nic.phy80211p timeTXToRX 0s
+attr unit s
+par Engine.node[0].nic.phy80211p timeTXToSleep 0s
+attr unit s
+par Engine.node[0].nic.phy80211p timeSleepToRX 0s
+attr unit s
+par Engine.node[0].nic.phy80211p timeSleepToTX 0s
+attr unit s
+par Engine.node[0].nic.phy80211p initialRadioState 0
+par Engine.node[0].nic.phy80211p radioMinAtt 1
+par Engine.node[0].nic.phy80211p radioMaxAtt 0
+par Engine.node[0].nic.phy80211p nbRadioChannels 1
+par Engine.node[0].nic.phy80211p initialRadioChannel 0
+par Engine.node[0].nic.phy80211p ccaThreshold -65dBm
+attr unit dBm
+par Engine.node[0].nic.phy80211p collectCollisionStatistics false
+par Engine.node[0].nic.phy80211p allowTxDuringRx false
+par Engine.node[0].nic.mac1609_4 typename "\"org.car2x.veins.modules.mac.ieee80211p.Mac1609_4\""
+par Engine.node[0].nic.mac1609_4 notAffectedByHostState false
+par Engine.node[0].nic.mac1609_4 headerLength 0bit
+attr unit bit
+par Engine.node[0].nic.mac1609_4 address "\"auto\""
+par Engine.node[0].nic.mac1609_4 useServiceChannel false
+par Engine.node[0].nic.mac1609_4 serviceChannel 1
+par Engine.node[0].nic.mac1609_4 bitrate 6000000bps
+attr unit bps
+par Engine.node[0].nic.mac1609_4 syncOffset 0.0003s
+attr unit s
+par Engine.node[0].nic.mac1609_4 txPower 100mW
+attr unit mW
+par Engine.node[0].nic.mac1609_4 queueSize 0
+par Engine.node[0].nic.mac1609_4 dot11RTSThreshold 12000bit
+attr unit bit
+par Engine.node[0].nic.mac1609_4 dot11ShortRetryLimit 7
+par Engine.node[0].nic.mac1609_4 dot11LongRetryLimit 4
+par Engine.node[0].nic.mac1609_4 ackLength 112bit
+attr unit bit
+par Engine.node[0].nic.mac1609_4 useAcks true
+par Engine.node[0].nic.mac1609_4 frameErrorRate 0
+par Engine.node[0].nic.mac1609_4 ackErrorRate 0
+par Engine.node[0].nic typename "\"org.car2x.veins.modules.nic.Nic80211p\""
+par Engine.node[0].nic connectionManagerName "\"connectionManager\""
+par Engine.node[0].mobility typename "\"org.car2x.veins.modules.mobility.traci.TraCIMobility\""
+par Engine.node[0].mobility notAffectedByHostState true
+par Engine.node[0].mobility x 0
+par Engine.node[0].mobility y 0
+par Engine.node[0].mobility z 1.895
+par Engine.node[0].mobility xOrientation 1
+par Engine.node[0].mobility yOrientation 0
+par Engine.node[0].mobility zOrientation 0
+par Engine.node[0].mobility hostPositionOffset 0m
+attr unit m
+par Engine.node[0].mobility setHostSpeed false
+par Engine.node[0].mobility accidentCount 0
+par Engine.node[0].mobility accidentStart 46.4644s
+attr unit s
+par Engine.node[0].mobility accidentDuration "uniform(30s, 60s)"
+attr unit s
+par Engine.node[0].mobility accidentInterval "uniform(30s, 60s)"
+attr unit s
+par Engine.node[0] typename "\"org.car2x.plexe.PlatoonCar\""
+par Engine.node[0] scenario_type "\"AccelerateAndBrakeScenario\""
+par Engine.node[0] helper_type "\"PositionHelper\""
+par Engine.node[0] appl_type "\"SimplePlatooningApp\""
+par Engine.node[0] protocol_type "\"SimplePlatooningBeaconing\""
+par Engine typename "\"Engine\""
+par Engine playgroundSizeX 65000m
+attr unit m
+par Engine playgroundSizeY 25000m
+attr unit m
+par Engine playgroundSizeZ 50m
+attr unit m
+par Engine traffic_type "\"PlatoonsTrafficManager\""
+par Engine useLaunchd false
+par Engine manager_type "\"PlexeScenarioManagerForker\""
+
