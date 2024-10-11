@@ -1,6 +1,6 @@
 # VANET-Blockchain-Auth-Scheme
 
-**Techstack**: Python, C, Solidity, Plexe, etc
+**Techstack**: Python, C++, Solidity, Plexe, etc
 
 ## VANET Security
 
