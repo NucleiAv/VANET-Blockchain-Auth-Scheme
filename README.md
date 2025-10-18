@@ -2,7 +2,7 @@
 
 **Techstack**: Python, C++, Solidity, Plexe, R, Shell, etc.
 
-**Note** - This code/repository is a part of our ongoing research on "_A Blockchain-based Privacy-Preserving Authentication Scheme for Secure Vehicular Communications_", in which we - Anmol Vats, Suryansh Arya and Sharvil Bhatt - are integral members and undergraduate researchers.
+**Note** - This code/repository is a part of our research on "_A Blockchain-based Privacy-Preserving Authentication Scheme for Secure Vehicular Communications_", in which we - Anmol Vats, Suryansh Arya and Sharvil Bhatt - are integral members and researchers.
 
 ## VANET Security
 
